@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+:root{
+    --maincolor:#864480
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background: linear-gradient(89deg, var(--maincolor), transparent);
+    box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1{
+    color: white;
+    text-shadow: 0 0 3px black;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app{
+    width: 80vw;
+    margin-left: 50%;
+    margin-top: 10vh;
+    transform: translateX(-50%);
+    text-align: center;
 }
-
-.App-link {
-  color: #61dafb;
+.app .main{
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 6px 1px var(--maincolor);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.enter{
+    position: relative;
+    margin-bottom: 15px;
+}
+.enter input{
+    padding: 7px 7px;
+    border: none;
+    border-radius: 5px;
+    width: 86%;
+    outline: none;
+}
+.enter .add{
+    position: absolute;
+    right: 6vw;
+    font-size: 20px;
+    color: var(--maincolor);
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.buttons button{
+    margin: 0 4px;
+    background: var(--maincolor);
+    color: white;
+    border: none;
+    padding: 4px 7px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.buttons .btn{box-shadow: 0 0 4px 0px white;}
+.buttons .open{box-shadow:inset 0 0 4px 0px white;}
+.box{
+    background: white;
+    border-radius: 6px;
+    position: relative;
+}
+.box .empty{
+    position: absolute;
+    left: 50%;
+    top: -4px;
+    transform: translatex(-50%);
+}
+.box .item{
+    border-bottom: 1px solid var(--maincolor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 11px;
+    width: 100%;
+    margin-left: -33px;
+}
+.box .done{
+    background: #52084b;
+    border-radius: 50%;
+}
+.box svg{
+    color: #52084b;
+    cursor: pointer;
+}
+.box li{
+    list-style: none;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
